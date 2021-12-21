@@ -270,6 +270,25 @@ window.App = (function app(window, document) {
         true,
       );
 
+      window.addEventListener('message', (event) => {
+        if (event.origin.startsWith('vscode-webview://')) {
+          console.log(event.data);
+
+          if (event.data.htmlStyle) {
+            document.documentElement.style = event.data.htmlStyle;
+          }
+
+          if (event.data.bodyStyle) {
+            document.body.style = event.data.bodyStyle;
+          }
+
+          if (event.data.togglePause) {
+            _isPaused = !_isPaused;
+          }
+
+        }
+      });
+
       // socket.io init
       _socket = opts.socket;
       _socket

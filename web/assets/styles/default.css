@@ -47,6 +47,8 @@ body {
 
 .no-topbar {
   padding-top: 10px;
+  background: inherit;
+  color: inherit;
 }
 
 .navbar-inverse .navbar-brand {
@@ -55,8 +57,10 @@ body {
 
 .log {
   white-space: pre-wrap;
-  color: black;
-  font-size: 0.85em;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
   background: inherit;
   border: 0;
   padding: 0;
