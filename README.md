@@ -31,6 +31,7 @@
 - download a binary file from [Releases](https://github.com/mthenw/frontail/releases) pagegit st
 - using [npm package](https://www.npmjs.com/package/frontail): `npm i frontail -g`
 - using [Docker image](https://cloud.docker.com/repository/docker/mthenw/frontail): `docker run -d -P -v /var/log:/log mthenw/frontail /log/syslog`
+- using Docker image TOTVS: `docker run -d -p 8081:9001 -v $(pwd):/log/ docker.totvs.io/engpro/frontail:latest /log/console.log`
 
 ## Usage
 
@@ -57,7 +58,7 @@
       --ui-highlight                highlight words or lines if defined string found in logs, default preset
       --ui-highlight-preset <path>  custom preset for highlighting (see ./preset/default.json)
       --path <path>                 prefix path for the running application, default /
-      --disable-usage-stats         disable gathering usage statistics
+      --disable-usage-stats         disable gathering usage statistics **IGNORED IN THIS REPO**
       --help                        output usage information
 
 Web interface runs on **http://[host]:[port]**.
